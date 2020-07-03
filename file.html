@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#000000">
   <title>Yay</title>
 </head>
-<body>
+<body style="margin: 0">
   <script>
     const tag = document.querySelector('meta[name=theme-color]')
     let h = 0
@@ -48,7 +48,9 @@
       h += 1 / 360
       if (h >= 1) h = 0
       let [r, g, b] = hslToRgb(h, s, l)
-      tag.content = `#${zp(parseInt(r).toString(16))}${zp(parseInt(g).toString(16))}${zp(parseInt(b).toString(16))}`
+      let color = `#${zp(parseInt(r).toString(16))}${zp(parseInt(g).toString(16))}${zp(parseInt(b).toString(16))}`
+      tag.content = color
+      document.body.style.backgroundColor = color
     }, 1000 / 36)
 
   </script>
