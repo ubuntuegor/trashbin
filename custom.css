@@ -1,0 +1,67 @@
+.dzScrobbler_overlay {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dzScrobbler_message {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  color: #333;
+  font-size: 16px;
+}
+
+#dzScrobbler_close {
+  position: relative;
+  float: right;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+#dzScrobbler_close:before,
+#dzScrobbler_close:after {
+  position: absolute;
+  left: 6px;
+  content: ' ';
+  height: 14px;
+  width: 1px;
+  background-color: #333;
+}
+
+#dzScrobbler_close:before {
+  transform: rotate(45deg);
+}
+
+#dzScrobbler_close:after {
+  transform: rotate(-45deg);
+}
+
+#dzScrobbler_form input {
+  margin-top: 10px;
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  border: solid 1px #aaa;
+  font-size: 12px;
+}
+
+#dzScrobbler_form button {
+  font-size: 12px;
+  background-color: #1583E9;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0;
+  margin-top: 10px;
+}
